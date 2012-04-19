@@ -8,5 +8,8 @@ vendor/*
 web/uploads/*
 web/bundles/*
 
+# IDE PhpStorm folder
+ .idea
+
 # Configuration files
 app/config/parameters.ini
