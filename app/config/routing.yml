@@ -1,3 +1,16 @@
+UsersUsersBundle:
+    resource: "@UsersUsersBundle/Resources/config/routing.yml"
+    prefix:   /
+
+AcmeStoreBundle:
+    resource: "@AcmeStoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+AcmeHelloBundle:
+    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
