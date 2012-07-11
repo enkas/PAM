@@ -1,0 +1,15 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: PAM
+    database_user: root
+    database_password: null
+
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+
+    locale: en
+    secret: 33106ddf9b1010cf3427f34530cfd9da75a
