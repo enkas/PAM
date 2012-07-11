@@ -1,5 +1,5 @@
 {
-    "hash": "ab7ccf177098603cace942212179431f",
+    "hash": "d47057c9a3496563e91788a9e2449337",
     "packages": [
         {
             "package": "doctrine/common",
@@ -16,6 +16,18 @@
             "version": "dev-master",
             "source-reference": "c9ea46d1f0c48bb88bb87b44214fe44e03c0c692",
             "commit-date": "1341405737"
+        },
+        {
+            "package": "doctrine/doctrine-migrations-bundle",
+            "version": "dev-master",
+            "source-reference": "3792aa78445773387754c6853bbd7f4dcb31f486",
+            "commit-date": "1341472972"
+        },
+        {
+            "package": "doctrine/migrations",
+            "version": "dev-master",
+            "source-reference": "fe98141b1e460baf5ab52f9139e1ae238101b28b",
+            "commit-date": "1336330359"
         },
         {
             "package": "doctrine/orm",
@@ -86,8 +98,8 @@
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "f51b5f33c83b48faea75f1285f99a2e8f1c66f75",
-            "commit-date": "1341746460"
+            "source-reference": "420e227f2238d2c21e464c15f103540d83b0d23b",
+            "commit-date": "1341949155"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -116,8 +128,8 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "5487a1f0767f96264823b4a128ad9e68d4b0220b",
-            "commit-date": "1341915525"
+            "source-reference": "d4b40fb24b04a7f24cf2c5d8a9a478dc565d80d5",
+            "commit-date": "1342030950"
         },
         {
             "package": "twig/extensions",
@@ -134,13 +146,11 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "26eb0a2653eade50dffdd31b11ca454232dea8cf",
-            "commit-date": "1341423205"
+            "source-reference": "611f4451e3e44b582fc49e901fdf0f149ee50498",
+            "commit-date": "1341937853"
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],
@@ -153,6 +163,7 @@
         "symfony/monolog-bundle": 20,
         "sensio/distribution-bundle": 20,
         "sensio/framework-extra-bundle": 20,
-        "sensio/generator-bundle": 20
+        "sensio/generator-bundle": 20,
+        "doctrine/doctrine-migrations-bundle": 20
     }
 }
