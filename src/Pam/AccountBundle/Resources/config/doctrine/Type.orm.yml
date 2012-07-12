@@ -1,0 +1,18 @@
+Pam\AccountBundle\Entity\Type:
+    type: entity
+    table: types
+    repositoryClass: Pam\AccountBundle\Entity\TypeRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+          type: string
+          lenght: '255'
+    oneToMany:
+        accounts:
+            targetEntity: Account
+            mappedBy: type
+    lifecycleCallbacks: {  }

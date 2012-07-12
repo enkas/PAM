@@ -1,0 +1,21 @@
+Pam\AccountBundle\Entity\Account:
+    type: entity
+    table: accounts
+    repositoryClass: Pam\AccountBundle\Entity\AccountRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            lenght: '255'
+    manyToOne:
+        type:
+            targetEntity: Type
+            inversedBy: accounts
+        user:
+            targetEntity: User
+            inversedBy: accounts
+    lifecycleCallbacks: {  }
