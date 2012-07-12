@@ -3,22 +3,22 @@ Pam\AccountBundle\Entity\User:
     table: users
     repositoryClass: Pam\AccountBundle\Entity\UserRepository
     fields:
-      id:
-          type: integer
-          id: true
-          generator:
-              strategy: AUTO
-      username:
-          type: string
-          lenght: '100'
-      name:
-          type: string
-          lenght: '255'
-          nullable: true
-      email:
-          type: string
-          lenght: '255'
-          nullable: true
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            lenght: '100'
+        name:
+            type: string
+            lenght: '255'
+            nullable: true
+        email:
+            type: string
+            lenght: '255'
+            nullable: true
     oneToMany:
         accounts:
             targetEntity: Account

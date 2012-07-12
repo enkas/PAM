@@ -1,0 +1,8 @@
+Pam\AccountBundle\Entity\Account:
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: text
+        type:
+            - NotBlank: ~
+            - Type: entity

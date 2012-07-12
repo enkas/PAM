@@ -1,0 +1,19 @@
+{% extends 'PamAccountBundle::layout.html.twig' %}
+
+{% block title %}Symfony - Welcome{% endblock %}
+
+{% block content_header '' %}
+
+{% block content %}
+        <li>List accounts:</li>
+        {% for account in accounts %}
+            <li>{{ account.name }}</li>
+        {% endfor %}
+
+<li>Create new account:</li>
+    <form action="{{ path('pam_account_accounts_list') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <input type="submit" />
+    </form>
+{% endblock %}
