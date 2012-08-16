@@ -11,6 +11,17 @@ Pam\AccountBundle\Entity\Account:
         name:
             type: string
             lenght: '255'
+        balance:
+            type: decimal
+            nullable: ture
+
+    oneToMany:
+        income:
+            targetEntity: Transfer
+            mappedBy: toAccount
+        expence:
+            targetEntity: Transfer
+            mappedBy: fromAccount
     manyToOne:
         type:
             targetEntity: Type

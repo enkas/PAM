@@ -1,0 +1,25 @@
+Pam\AccountBundle\Entity\Transfer:
+    type: entity
+    table: transfers
+    repositoryClass: Pam\AccountBundle\Entity\TransferRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        value:
+            type: decimal
+        data:
+            type: datetime
+    manyToOne:
+        fromAccount:
+            targetEntity: Account
+            inversedBy: expence
+        toAccount:
+            targetEntity: Account
+            inversedBy: income
+        user:
+            targetEntity: User
+            inversedBy: accounts
+    lifecycleCallbacks: {  }

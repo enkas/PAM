@@ -146,4 +146,41 @@ class User
     {
         return $this->accounts;
     }
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     */
+    private $transfers;
+
+
+    /**
+     * Add transfers
+     *
+     * @param Pam\AccountBundle\Entity\Transfer $transfers
+     * @return User
+     */
+    public function addTransfer(\Pam\AccountBundle\Entity\Transfer $transfers)
+    {
+        $this->transfers[] = $transfers;
+        return $this;
+    }
+
+    /**
+     * Remove transfers
+     *
+     * @param <variableType$transfers
+     */
+    public function removeTransfer(\Pam\AccountBundle\Entity\Transfer $transfers)
+    {
+        $this->transfers->removeElement($transfers);
+    }
+
+    /**
+     * Get transfers
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getTransfers()
+    {
+        return $this->transfers;
+    }
 }

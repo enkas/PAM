@@ -105,4 +105,110 @@ class Account
     {
         return $this->user;
     }
+    /**
+     * @var decimal $balance
+     */
+    private $balance;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     */
+    private $income;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     */
+    private $expence;
+
+    public function __construct()
+    {
+        $this->income = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->expence = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Set balance
+     *
+     * @param decimal $balance
+     * @return Account
+     */
+    public function setBalance($balance)
+    {
+        $this->balance = $balance;
+        return $this;
+    }
+
+    /**
+     * Get balance
+     *
+     * @return decimal 
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Add income
+     *
+     * @param Pam\AccountBundle\Entity\Transfer $income
+     * @return Account
+     */
+    public function addIncome(\Pam\AccountBundle\Entity\Transfer $income)
+    {
+        $this->income[] = $income;
+        return $this;
+    }
+
+    /**
+     * Remove income
+     *
+     * @param <variableType$income
+     */
+    public function removeIncome(\Pam\AccountBundle\Entity\Transfer $income)
+    {
+        $this->income->removeElement($income);
+    }
+
+    /**
+     * Get income
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getIncome()
+    {
+        return $this->income;
+    }
+
+    /**
+     * Add expence
+     *
+     * @param Pam\AccountBundle\Entity\Transfer $expence
+     * @return Account
+     */
+    public function addExpence(\Pam\AccountBundle\Entity\Transfer $expence)
+    {
+        $this->expence[] = $expence;
+        return $this;
+    }
+
+    /**
+     * Remove expence
+     *
+     * @param <variableType$expence
+     */
+    public function removeExpence(\Pam\AccountBundle\Entity\Transfer $expence)
+    {
+        $this->expence->removeElement($expence);
+    }
+
+    /**
+     * Get expence
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getExpence()
+    {
+        return $this->expence;
+    }
 }

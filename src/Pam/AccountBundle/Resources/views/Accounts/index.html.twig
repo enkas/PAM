@@ -6,11 +6,13 @@
 
 {% block content %}
         <li>List accounts:</li>
+        <ul>
         {% for account in accounts %}
             <li>{{ account.name }}</li>
         {% endfor %}
+        </ul>
 
-<li>Create new account:</li>
+    <li>Create new account:</li>
     <form action="{{ path('pam_account_accounts_list') }}" method="post" {{ form_enctype(form) }}>
         {{ form_widget(form) }}
 

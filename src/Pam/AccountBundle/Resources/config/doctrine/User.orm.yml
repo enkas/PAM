@@ -23,4 +23,7 @@ Pam\AccountBundle\Entity\User:
         accounts:
             targetEntity: Account
             mappedBy: user
+        transfers:
+            targetEntity: Transfer
+            mappedBy: user
     lifecycleCallbacks: {  }
